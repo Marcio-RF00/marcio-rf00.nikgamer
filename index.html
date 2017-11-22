@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset=utf-8>
+		<meta name=viewport content="width=device-width, initial-scale=1">
+		<title>Nik-Gamer-Home</title>
+		<link href='https://fonts.googleapis.com/css?family=Indie+Flower:400,200,300,700,600' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light:400,100' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style_common.css" />
+        <link rel="stylesheet" type="text/css" href="css/style2.css" />
+        <link rel="stylesheet" type="text/css" href="css/responsive.css" />
+		
+	</head>
+	<body  onLoad="setInterval('slideshow()',2000)";>
+		<header>
+			<div class="branding-area">
+				<div class="container">
+					<div class="row">
+						<div id="grid" class="main">
+							<div class="view">
+								<div class="view-back">
+									<a href="index.html">Home</a>
+									<a href="videos.html">Vídeos</a>
+								</div>
+								<img src="img/logo.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="separation">
+				<hr>
+			</div>
+		</header><!-- /header -->
+		<section>
+			<div class="container">
+				<div class="row">
+					<p class="imagem"><img id="mob-slide" /*src="lu_tran.gif"*/ name="foto"> </p>
+					<div class="col-md-6">
+						<div id="img">
+							<img id="mob-img" src="img/nik3.jpg">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<h1 class="title-sec">Nik Gamer</h1>		
+					</div>
+				</div>	
+			</div>		
+		</section><!--/section-->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h2>Sobre</h2>
+						<p>Olá Mundo Brasil,<br>Meu nome é Nikolas e sou Youtuber, morador de Cachoeirinha-RS, tenho 13 anos e amo vídeo games. Em meus vídeos mostro passo a passo, as sequencias de fases dos games que mais gosto. Entrem na galeria dos meus<a href="videos.html"> vídeos</a> e se gostarem, se inscrevam no meu <a href="https://www.youtube.com/channel/UCjPQdPtqYCCO3f9JgyWNTsA">canal</a> e deixem um like.<br>Obrigado!!!</p>
+					</div>
+					<div class="col-md-6">
+						<img class="igm" src="img/logo.png">
+					</div>
+				</div>
+			</div>
+			<div class="row row-cinza-escuro">
+				<div class="container">
+					<p class="pull-left">Copyright &copy; NikGamer 2017. All rights reserved.</p>
+					<p class="pull-right">Created by <strong><em>Márcio Rodrigues Fabiano</em></strong></p>
+				</div>
+			</div>
+		</footer><!--/footer-->
+		<script src="jquery/jquery.min.js"></script>
+		<script src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/modernizr.custom.69142.js"></script>
+		<script type="text/javascript">	
+			
+				Modernizr.load({
+					test: Modernizr.csstransforms3d && Modernizr.csstransitions,
+					yep : ['http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js','js/jquery.hoverfold.js'],
+					nope: 'css/fallback.css',
+					callback : function( url, result, key ) {
+							
+						if( url === 'js/jquery.hoverfold.js' ) {
+							$( '#grid' ).hoverfold();
+						}
+
+					}
+				});
+		</script>
+		<script>
+						
+				b=0
+				function slideshow()
+				{
+					switch (b)
+					{
+					case 0:foto.src="img/nik1.jpg";
+						break;
+					case 2:foto.src="img/nik4.jpg";
+					b=-1;
+					}
+					b++;
+				}
+		</script>
+	</body>
+</html>
